@@ -13,6 +13,7 @@
 #include<stack>
 #include <string>
 #include <iostream>¡¡
+#include <sstream> 
 #include <algorithm>
 
 #pragma once
