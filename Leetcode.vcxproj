@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="0001twoSum.cpp" />
     <ClCompile Include="0002addTwoNumbers.cpp" />
+    <ClCompile Include="0003lengthOfLongestSubstring.cpp" />
+    <ClCompile Include="0011maxArea.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
     <ClCompile Include="0223computeArea.cpp" />
   </ItemGroup>

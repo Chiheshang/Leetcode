@@ -27,6 +27,12 @@
     <ClCompile Include="0223computeArea.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="0003lengthOfLongestSubstring.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="0011maxArea.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">
