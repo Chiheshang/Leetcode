@@ -13,24 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\done">
+      <UniqueIdentifier>{3a42274d-542d-4a3b-be5f-c07ea1ee5b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\meaningful">
+      <UniqueIdentifier>{6215e98b-cd44-4a11-a72d-306df3693dd8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="0405toHex.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
     <ClCompile Include="0001twoSum.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\done</Filter>
     </ClCompile>
     <ClCompile Include="0002addTwoNumbers.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="0217containsDuplicate.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="0223computeArea.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\done</Filter>
     </ClCompile>
     <ClCompile Include="0003lengthOfLongestSubstring.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\done</Filter>
     </ClCompile>
     <ClCompile Include="0011maxArea.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
+    <ClCompile Include="0217containsDuplicate.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
+    <ClCompile Include="0223computeArea.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
+    <ClCompile Include="0482licenseKeyFormatting.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
