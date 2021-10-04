@@ -54,18 +54,18 @@ public:
 //int stringToInteger(string input) {
 //    return stoi(input);
 //}
-
-int main() {
-    string line;
-    while (getline(cin, line)) {
-        string s = stringToString(line);
-        getline(cin, line);
-        int k = stringToInteger(line);
-
-        string ret = Solution().licenseKeyFormatting(s, k);
-
-        string out = (ret);
-        cout << out << endl;
-    }
-    return 0;
-}
+//
+//int main() {
+//    string line;
+//    while (getline(cin, line)) {
+//        string s = stringToString(line);
+//        getline(cin, line);
+//        int k = stringToInteger(line);
+//
+//        string ret = Solution().licenseKeyFormatting(s, k);
+//
+//        string out = (ret);
+//        cout << out << endl;
+//    }
+//    return 0;
+//}
