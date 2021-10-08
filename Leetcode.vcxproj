@@ -144,10 +144,13 @@
     <ClCompile Include="0003lengthOfLongestSubstring.cpp" />
     <ClCompile Include="0005longestPalindrome.cpp" />
     <ClCompile Include="0011maxArea.cpp" />
+    <ClCompile Include="0014longestCommonPrefix.cpp" />
+    <ClCompile Include="0187findRepeatedDnaSequences.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
     <ClCompile Include="0223computeArea.cpp" />
     <ClCompile Include="0405toHex.cpp" />
     <ClCompile Include="0482licenseKeyFormatting.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h" />
