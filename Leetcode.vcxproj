@@ -150,7 +150,6 @@
     <ClCompile Include="0223computeArea.cpp" />
     <ClCompile Include="0405toHex.cpp" />
     <ClCompile Include="0482licenseKeyFormatting.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h" />

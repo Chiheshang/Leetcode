@@ -3,7 +3,8 @@ using namespace std;
 class Solution {
 public:
 	string longestCommonPrefix(vector<string>& strs) {
-		int min = 0;
+		if (strs.size() == 1)return strs[0];
+		int min = INT32_MAX;
 		for (string cur : strs) {
 			min = std::min(min, (int)cur.length());
 		}
@@ -19,7 +20,18 @@ public:
 				length = j;
 				break;
 			}
+			else {
+				length = j + 1;
+			}
 		}
-		return strs[0].substr(0,length);
+		return strs[0].substr(0, length);
 	}
 };
+//int main() {
+//	string line;
+//	while (getline(cin, line)) {
+//		vector<string> strings = { "flower","flower","flower","flower" };
+//		cout << Solution().longestCommonPrefix(strings) << endl;
+//	}
+//	return 0;
+//}

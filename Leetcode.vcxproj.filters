@@ -48,14 +48,11 @@
     <ClCompile Include="0005longestPalindrome.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="0187findRepeatedDnaSequences.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
     <ClCompile Include="0014longestCommonPrefix.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\done</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
