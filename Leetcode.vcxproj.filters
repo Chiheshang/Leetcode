@@ -58,7 +58,7 @@
       <Filter>源文件\done</Filter>
     </ClCompile>
     <ClCompile Include="0020isValid.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\done</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
