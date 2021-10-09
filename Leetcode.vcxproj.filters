@@ -63,9 +63,6 @@
     <ClCompile Include="0021mergeTwoLists.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
-    <ClCompile Include="0026removeDuplicates.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="0007reverse.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
@@ -82,6 +79,9 @@
       <Filter>源文件\done</Filter>
     </ClCompile>
     <ClCompile Include="0583minDistance.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
+    <ClCompile Include="0026removeDuplicates.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
   </ItemGroup>
