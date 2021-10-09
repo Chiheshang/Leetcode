@@ -146,6 +146,7 @@
     <ClCompile Include="0011maxArea.cpp" />
     <ClCompile Include="0014longestCommonPrefix.cpp" />
     <ClCompile Include="0020isValid.cpp" />
+    <ClCompile Include="0021mergeTwoLists.cpp" />
     <ClCompile Include="0187findRepeatedDnaSequences.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
     <ClCompile Include="0223computeArea.cpp" />

@@ -60,6 +60,9 @@
     <ClCompile Include="0020isValid.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
+    <ClCompile Include="0021mergeTwoLists.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">
