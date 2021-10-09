@@ -84,6 +84,9 @@
     <ClCompile Include="0026removeDuplicates.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
+    <ClCompile Include="0352SummaryRanges.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">
