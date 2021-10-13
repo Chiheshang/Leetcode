@@ -90,6 +90,9 @@
     <ClCompile Include="0273numberToWords.cpp">
       <Filter>源文件\meaningful</Filter>
     </ClCompile>
+    <ClCompile Include="0412fizzBuzz.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">

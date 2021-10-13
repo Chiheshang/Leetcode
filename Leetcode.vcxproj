@@ -158,6 +158,7 @@
     <ClCompile Include="0326isPowerOfThree.cpp" />
     <ClCompile Include="0352SummaryRanges.cpp" />
     <ClCompile Include="0405toHex.cpp" />
+    <ClCompile Include="0412fizzBuzz.cpp" />
     <ClCompile Include="0414thirdMax.cpp" />
     <ClCompile Include="0482licenseKeyFormatting.cpp" />
     <ClCompile Include="0583minDistance.cpp" />
