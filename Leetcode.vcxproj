@@ -152,6 +152,7 @@
     <ClCompile Include="0021mergeTwoLists.cpp" />
     <ClCompile Include="0026removeDuplicates.cpp" />
     <ClCompile Include="0027removeElement.cpp" />
+    <ClCompile Include="0028strStr.cpp" />
     <ClCompile Include="0187findRepeatedDnaSequences.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
     <ClCompile Include="0223computeArea.cpp" />

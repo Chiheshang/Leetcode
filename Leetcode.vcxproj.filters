@@ -96,6 +96,9 @@
     <ClCompile Include="0027removeElement.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
+    <ClCompile Include="0028strStr.cpp">
+      <Filter>源文件\meaningful</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">
