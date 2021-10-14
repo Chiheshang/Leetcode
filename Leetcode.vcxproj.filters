@@ -108,6 +108,9 @@
     <ClCompile Include="0053maxSubArray.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
+    <ClCompile Include="0058lengthOfLastWord.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">
