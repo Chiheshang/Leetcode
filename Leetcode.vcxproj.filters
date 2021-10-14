@@ -99,6 +99,9 @@
     <ClCompile Include="0028strStr.cpp">
       <Filter>源文件\meaningful</Filter>
     </ClCompile>
+    <ClCompile Include="0069peakIndexInMountainArray.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">

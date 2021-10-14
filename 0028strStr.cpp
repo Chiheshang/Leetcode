@@ -59,18 +59,18 @@ string stringToString(string input) {
     }
     return result;
 }
-
-int main() {
-    string line;
-    while (getline(cin, line)) {
-        string haystack = stringToString(line);
-        getline(cin, line);
-        string needle = stringToString(line);
-
-        int ret = Solution().strStrKmp(haystack, needle);
-
-        string out = to_string(ret);
-        cout << out << endl;
-    }
-    return 0;
-}
+//
+//int main() {
+//    string line;
+//    while (getline(cin, line)) {
+//        string haystack = stringToString(line);
+//        getline(cin, line);
+//        string needle = stringToString(line);
+//
+//        int ret = Solution().strStrKmp(haystack, needle);
+//
+//        string out = to_string(ret);
+//        cout << out << endl;
+//    }
+//    return 0;
+//}
