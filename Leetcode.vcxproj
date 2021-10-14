@@ -153,6 +153,7 @@
     <ClCompile Include="0026removeDuplicates.cpp" />
     <ClCompile Include="0027removeElement.cpp" />
     <ClCompile Include="0028strStr.cpp" />
+    <ClCompile Include="0035searchInsert.cpp" />
     <ClCompile Include="0069peakIndexInMountainArray.cpp" />
     <ClCompile Include="0187findRepeatedDnaSequences.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
