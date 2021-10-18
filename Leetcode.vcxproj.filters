@@ -114,6 +114,12 @@
     <ClCompile Include="0066plusOne.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
+    <ClCompile Include="0067addBinary.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="0038countAndSay.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">

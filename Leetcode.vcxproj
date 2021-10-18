@@ -154,9 +154,11 @@
     <ClCompile Include="0027removeElement.cpp" />
     <ClCompile Include="0028strStr.cpp" />
     <ClCompile Include="0035searchInsert.cpp" />
+    <ClCompile Include="0038countAndSay.cpp" />
     <ClCompile Include="0053maxSubArray.cpp" />
     <ClCompile Include="0058lengthOfLastWord.cpp" />
     <ClCompile Include="0066plusOne.cpp" />
+    <ClCompile Include="0067addBinary.cpp" />
     <ClCompile Include="0069peakIndexInMountainArray.cpp" />
     <ClCompile Include="0187findRepeatedDnaSequences.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
