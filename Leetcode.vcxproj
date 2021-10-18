@@ -163,12 +163,14 @@
     <ClCompile Include="0187findRepeatedDnaSequences.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
     <ClCompile Include="0223computeArea.cpp" />
+    <ClCompile Include="0230kthSmallest.cpp" />
     <ClCompile Include="0273numberToWords.cpp" />
     <ClCompile Include="0326isPowerOfThree.cpp" />
     <ClCompile Include="0352SummaryRanges.cpp" />
     <ClCompile Include="0405toHex.cpp" />
     <ClCompile Include="0412fizzBuzz.cpp" />
     <ClCompile Include="0414thirdMax.cpp" />
+    <ClCompile Include="0476findComplement.cpp" />
     <ClCompile Include="0482licenseKeyFormatting.cpp" />
     <ClCompile Include="0583minDistance.cpp" />
     <ClCompile Include="1920buildArray.cpp" />
