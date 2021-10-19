@@ -9,7 +9,7 @@
 #include<list>
 #include<map>
 #include<unordered_map>
-#include<deque>
+#include <queue>
 #include<set>
 #include<unordered_set>
 #include<stack>

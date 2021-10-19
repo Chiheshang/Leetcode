@@ -116,10 +116,10 @@
     <ClCompile Include="0038countAndSay.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="0230kthSmallest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="0476findComplement.cpp">
+      <Filter>源文件\done</Filter>
+    </ClCompile>
+    <ClCompile Include="0230kthSmallest.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
   </ItemGroup>

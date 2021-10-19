@@ -17,10 +17,10 @@ public:
 		this->c = c;
 	}
 };
-int main() {
-	item* array[3];
-	for (int i = 0; i < 3; i++) {
-		array[i] = new item(0, '3');
-	}
-	cout << array[0]->c << endl;
-}
+//int main() {
+//	item* array[3];
+//	for (int i = 0; i < 3; i++) {
+//		array[i] = new item(0, '3');
+//	}
+//	cout << array[0]->c << endl;
+//}
