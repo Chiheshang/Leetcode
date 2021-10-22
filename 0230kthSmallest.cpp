@@ -87,21 +87,21 @@ TreeNode* stringToTreeNode(string input) {
 	return root;
 }
 
-int stringToInteger(string input) {
-	return stoi(input);
-}
-
-int main() {
-	string line;
-	while (getline(cin, line)) {
-		TreeNode* root = stringToTreeNode(line);
-		getline(cin, line);
-		int k = stringToInteger(line);
-
-		int ret = Solution().kthSmallest(root, k);
-
-		string out = to_string(ret);
-		cout << out << endl;
-	}
-	return 0;
-}
+//int stringToInteger(string input) {
+//	return stoi(input);
+//}
+//
+//int main() {
+//	string line;
+//	while (getline(cin, line)) {
+//		TreeNode* root = stringToTreeNode(line);
+//		getline(cin, line);
+//		int k = stringToInteger(line);
+//
+//		int ret = Solution().kthSmallest(root, k);
+//
+//		string out = to_string(ret);
+//		cout << out << endl;
+//	}
+//	return 0;
+//}
