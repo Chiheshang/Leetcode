@@ -22,7 +22,7 @@ public:
 		}
 		return ans;
 	}
-    vector<int> majorityElement(vector<int>& nums) {//摩尔投票法
+    vector<int> majorityElement1(vector<int>& nums) {//摩尔投票法
         vector<int> ans;
         int element1 = 0;
         int element2 = 0;
