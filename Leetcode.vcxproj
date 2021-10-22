@@ -163,6 +163,7 @@
     <ClCompile Include="0187findRepeatedDnaSequences.cpp" />
     <ClCompile Include="0217containsDuplicate.cpp" />
     <ClCompile Include="0223computeArea.cpp" />
+    <ClCompile Include="0229majorityElement.cpp" />
     <ClCompile Include="0230kthSmallest.cpp" />
     <ClCompile Include="0273numberToWords.cpp" />
     <ClCompile Include="0326isPowerOfThree.cpp" />

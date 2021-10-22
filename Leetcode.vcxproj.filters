@@ -122,6 +122,9 @@
     <ClCompile Include="0230kthSmallest.cpp">
       <Filter>源文件\done</Filter>
     </ClCompile>
+    <ClCompile Include="0229majorityElement.cpp">
+      <Filter>源文件\meaningful</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Datastruct.h">
