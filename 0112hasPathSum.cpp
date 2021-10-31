@@ -86,25 +86,25 @@ TreeNode* stringToTreeNode(string input) {
 	return root;
 }
 
-int stringToInteger(string input) {
-	return stoi(input);
-}
-
-string boolToString(bool input) {
-	return input ? "True" : "False";
-}
-
-int main() {
-	string line;
-	while (getline(cin, line)) {
-		TreeNode* root = stringToTreeNode(line);
-		getline(cin, line);
-		int targetSum = stringToInteger(line);
-
-		bool ret = Solution().hasPathSum(root, targetSum);
-
-		string out = boolToString(ret);
-		cout << out << endl;
-	}
-	return 0;
-}
+//int stringToInteger(string input) {
+//	return stoi(input);
+//}
+//
+//string boolToString(bool input) {
+//	return input ? "True" : "False";
+//}
+//
+//int main() {
+//	string line;
+//	while (getline(cin, line)) {
+//		TreeNode* root = stringToTreeNode(line);
+//		getline(cin, line);
+//		int targetSum = stringToInteger(line);
+//
+//		bool ret = Solution().hasPathSum(root, targetSum);
+//
+//		string out = boolToString(ret);
+//		cout << out << endl;
+//	}
+//	return 0;
+//}
