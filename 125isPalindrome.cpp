@@ -19,7 +19,7 @@ public:
 		}
 		return true;
 	}
-};
+};/*
 string stringToString(string input) {
     string result;
     for (int i = 1; i < input.length() - 1; i++) {
@@ -61,4 +61,4 @@ int main() {
         cout << out << endl;
     }
     return 0;
-}
+}*/
