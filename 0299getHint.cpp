@@ -26,6 +26,7 @@ public:
 				num_coutA[b]--;
 			}
 		}
+		
 		string ans = "";
 		ans = ans + to_string(numA) + "A" + to_string(numB) + "B";
 		return ans;
