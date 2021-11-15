@@ -1,130 +1,91 @@
 #include"Datastruct.h"
 using namespace std;
+struct State {
+    string board;
+    string hand;
+    int step;
+    State(const string& board, const string& hand, int step) {
+        this->board = board;
+        this->hand = hand;
+        this->step = step;
+    }
+};
 
 class Solution {
-    int ans, used;
-    unordered_map<char, int> rem;
-    stack<pair<char, int>> st;
+public:
+    string clean(const string& s) {
+        string res;
+        vector<pair<char, int>> st;
 
-    void dfs(int pos, string& board) {
-        if (used >= ans)
-            return;
-
-        if (pos == board.size()) {
-            if (st.empty())
-                ans = used;
-            return;
-        }
-
-        // 将pos位置的小球加入
-        if (!st.empty() && st.top().first == board[pos]) {
-            st.top().second++;
-        }
-        else {
-            st.emplace(board[pos], 1);
-        }
-
-        if (st.top().second >= 3) {
-            if (pos + 1 == board.size() || board[pos + 1] != board[pos]) {
-                // 后面没有相同颜色的球，可以直接消去
-                auto tmp = st.top();
-                st.pop();
-                dfs(pos + 1, board);
-                st.push(tmp);
+        for (auto c : s) {
+            while (!st.empty() && c != st.back().first && st.back().second >= 3) {
+                st.pop_back();
+            }
+            if (st.empty() || c != st.back().first) {
+                st.push_back({ c,1 });
             }
             else {
-                // 后面有相同颜色的球，必须插入与当前位置不同色的小球进行分隔后，才能将当前积累的小球消去；否则必须和后面的同色球一起消去。
-                auto tmp = st.top(); // 维护现场
-                st.pop(); // 消去当前积累的同色小球
+                st.back().second++;
+            }
+        }
+        if (!st.empty() && st.back().second >= 3) {
+            st.pop_back();
+        }
+        for (int i = 0; i < st.size(); ++i) {
+            for (int j = 0; j < st[i].second; ++j) {
+                res.push_back(st[i].first);
+            }
+        }
+        return res;
+    }
 
-                for (auto [ch, num] : rem) {
-                    if (ch == board[pos])
+    int findMinStep(string board, string hand) {
+        unordered_set<string> visited;
+        sort(hand.begin(), hand.end());
+
+        visited.insert(board + " " + hand);
+        queue<State> qu;
+        qu.push(State(board, hand, 0));
+        while (!qu.empty()) {
+            State curr = qu.front();
+            qu.pop();
+
+            for (int j = 0; j < curr.hand.size(); ++j) {
+                // 第 1 个剪枝条件: 当前选择的球的颜色和前一个球的颜色相同
+                if (j > 0 && curr.hand[j] == curr.hand[j - 1]) {
+                    continue;
+                }
+                for (int i = 0; i <= curr.board.size(); ++i) {
+                    // 第 2 个剪枝条件: 只在连续相同颜色的球的开头位置插入新球
+                    if (i > 0 && curr.board[i - 1] == curr.hand[j]) {
                         continue;
-                    for (int j = 1; j <= min(3, num); ++j) {
-                        rem[ch] -= j;
-                        used += j;
+                    }
 
-                        // 加入j个小球
-                        if (!st.empty() && st.top().first == ch) {
-                            st.top().second += j;
+                    // 第 3 个剪枝条件: 只在以下两种情况放置新球
+                    bool choose = false;
+                    //   第 1 种情况 : 当前球颜色与后面的球的颜色相同
+                    if (i < curr.board.size() && curr.board[i] == curr.hand[j]) {
+                        choose = true;
+                    }
+                    //   第 2 种情况 : 当前后颜色相同且与当前颜色不同时候放置球
+                    if (i > 0 && i < curr.board.size() && curr.board[i - 1] == curr.board[i] && curr.board[i] != curr.hand[j]) {
+                        choose = true;
+                    }
+                    if (choose) {
+                        string new_board = clean(curr.board.substr(0, i) + curr.hand[j] + curr.board.substr(i));
+                        string new_hand = curr.hand.substr(0, j) + curr.hand.substr(j + 1);
+                        if (new_board.size() == 0) {
+                            return curr.step + 1;
                         }
-                        else {
-                            st.emplace(ch, j);
+                        if (!visited.count(new_board + " " + new_hand)) {
+                            qu.push(State(new_board, new_hand, curr.step + 1));
+                            visited.insert(new_board + " " + new_hand);
                         }
-
-                        if (st.top().second >= 3) { // 插入的异色球和之前的球累加达到了三个
-                            auto tmp2 = st.top(); // 维护现场
-                            st.pop(); // 消去同色球
-                            dfs(pos + 1, board);
-                            st.push(tmp2); // 还原现场
-                        }
-                        else {
-                            dfs(pos + 1, board);
-                        }
-
-                        // 还原现场
-                        if (st.top().second > j) {
-                            st.top().second -= j;
-                        }
-                        else {
-                            st.pop();
-                        }
-                        used -= j;
-                        rem[ch] += j;
                     }
                 }
-
-                st.push(tmp); // 还原现场
             }
         }
 
-        // 插入与当前位置同色的小球
-        if (rem[board[pos]] >= 1 && (pos + 1 == board.size() || board[pos + 1] != board[pos])) {
-            int lim = rem[board[pos]];
-            for (int i = 1; i <= min(2, lim); ++i) {
-                // 加入i个同色小球
-                rem[board[pos]] -= i;
-                used += i;
-                st.top().second += i;
-                if (st.top().second >= 3) { // 累积同色球达到三个
-                    auto tmp = st.top(); // 维护现场
-                    st.pop(); // 消去同色球
-                    dfs(pos + 1, board);
-                    st.push(tmp); // 还原现场
-                }
-                else {
-                    dfs(pos + 1, board);
-                }
-
-                // 还原现场
-                st.top().second -= i;
-                used -= i;
-                rem[board[pos]] += i;
-            }
-        }
-
-        // 不额外插入小球的情形
-        // 1. 当前颜色小球不满三个
-        // 2. 当前颜色小球满三个，但当前小球和下一小球同色，这说明初始情形为XX...XX，之后中间的小球被消去，从而形成了XXXX，这种情况是允许的。
-        if (st.top().second < 3 || (st.top().second == 3 && pos + 1 < board.size() && board[pos] == board[pos + 1]))
-            dfs(pos + 1, board);
-
-        // 还原现场
-        if (st.top().second == 1) {
-            st.pop();
-        }
-        else {
-            st.top().second--;
-        }
-    }
-public:
-    int findMinStep(string board, string hand) {
-        for (char ch : hand)
-            rem[ch]++;
-
-        ans = 1e9;
-        used = 0;
-        dfs(0, board);
-        return ans == 1e9 ? -1 : ans;
+        return -1;
     }
 };
