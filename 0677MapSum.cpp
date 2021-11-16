@@ -99,10 +99,10 @@ public:
 		return tree->sum(prefix);
 	}
 };
-int main() {
-	MapSum m_map;
-	m_map.insert("ab", 3);
-	m_map.insert("abc", 2);
-	int a = m_map.sum("ab");
-	int b = 0;
-}
+//int main() {
+//	MapSum m_map;
+//	m_map.insert("ab", 3);
+//	m_map.insert("abc", 2);
+//	int a = m_map.sum("ab");
+//	int b = 0;
+//}
