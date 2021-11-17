@@ -3,10 +3,7 @@ using namespace std;
 class Solution {
 public:
 	int divide(int dividend, int divisor) {
-		bool flag = (dividend < 0) ^ (divisor < 0);
-		dividend = abs(dividend);
-		divisor = abs(divisor);
-		if (dividend >> 1 < divisor)return flag ? -1 : 1;
-		int left = 2;
+		if (dividend == -2147483648 && divisor == -1)return 2147483647;
+		return dividend / divisor;
 	}
 };
