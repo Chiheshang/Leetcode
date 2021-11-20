@@ -1,35 +1,32 @@
 #include<iostream>
 #include<thread>
+#include <stdlib.h>
+#include <time.h> 
+#include<vector>
+#include"json.h"
 using namespace std;
-void download1()
-{
-    cout << "开始下载第一个视频..." << endl;
-    for (int i = 0; i < 100; ++i) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
-        cout << "第一个视频下载进度:" << i << endl;
-    }
-    cout << "第一个视频下载完成..." << endl;
-}
 
-void download2()
+int main()
 {
-    cout << "开始下载第二个视频..." << endl;
-    for (int i = 0; i < 100; ++i) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(80));
-        cout << "第二个视频下载进度:" << i << endl;
-    }
-    cout << "第二个视频下载完成..." << endl;
-}
-void process()
-{
-    cout << "开始处理两个视频" << endl;
-}
+    std::string strValue = "{ \"name\":\"json\", \"array\" : [{\"key0\":23456}, {\"key1\":123}] }";
 
-//int main()
-//{
-//    cout << "主线程开始运行\n";
-//    std::thread d2(download2);
-//    download1();
-//    d2.join();
-//    process();
-//}
+    Json::Reader reader;
+    Json::Value value;
+    if (reader.parse(strValue, value))
+    {
+        std::string out = value["name"].asString();
+        std::cout << out << std::endl;
+        const Json::Value arrayObj = value["array"];
+        for (unsigned int i = 0; i < arrayObj.size(); i++)
+        {
+            if (!arrayObj[i].isMember("key0"))
+                continue;
+            out = arrayObj[i]["key0"].asString();
+            int m_int = arrayObj[i]["key0"].asInt64();
+            std::cout << out<<endl;
+            cout << m_int << endl;
+            if (i != (arrayObj.size() - 1))
+                std::cout << std::endl;
+        }
+    }
+}
