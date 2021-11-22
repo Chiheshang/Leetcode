@@ -12,6 +12,6 @@ public:
 		return ans;
 	}
 };
-int main() {
-	Solution().hammingWeight(11);
-}
+//int main() {
+//	Solution().hammingWeight(11);
+//}
