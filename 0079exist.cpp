@@ -26,8 +26,3 @@ public:
 			hasnext(board, i, j - 1, word) || hasnext(board, i, j + 1, word);
 	}
 };
-int main() {
-	vector<vector<char>> a = { {'a','b'} ,{'c','d'} };
-	bool ab= Solution().exist(a, "abcd") ;
-	return 1;
-}
