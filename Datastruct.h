@@ -37,20 +37,34 @@ struct ListNode {
 	ListNode(int x, ListNode* next) : val(x), next(next) {}
 
 };
+//class Node {
+//public:
+//	int val;
+//	vector<Node*> neighbors;
+//	Node() {
+//		val = 0;
+//		neighbors = vector<Node*>();
+//	}
+//	Node(int _val) {
+//		val = _val;
+//		neighbors = vector<Node*>();
+//	}
+//	Node(int _val, vector<Node*> _neighbors) {
+//		val = _val;
+//		neighbors = _neighbors;
+//	}
+//};
 class Node {
 public:
 	int val;
-	vector<Node*> neighbors;
-	Node() {
-		val = 0;
-		neighbors = vector<Node*>();
-	}
-	Node(int _val) {
-		val = _val;
-		neighbors = vector<Node*>();
-	}
-	Node(int _val, vector<Node*> _neighbors) {
-		val = _val;
-		neighbors = _neighbors;
-	}
+	Node* left;
+	Node* right;
+	Node* next;
+
+	Node() : val(0), left(NULL), right(NULL), next(NULL) {}
+
+	Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+
+	Node(int _val, Node* _left, Node* _right, Node* _next)
+		: val(_val), left(_left), right(_right), next(_next) {}
 };
