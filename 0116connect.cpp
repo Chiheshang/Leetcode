@@ -2,7 +2,7 @@
 using namespace std;
 class Solution {
 public:
-	Node* connect(Node* root) {
+	TreeNode* connect(TreeNode* root) {
 		if (!root || !root->left)return root;
 		root->left->next = root->right;
 		if (root->next)
@@ -11,11 +11,11 @@ public:
 		connect(root->right);
 		return root;
 	}
-	Node* connect(Node* root) {
+	TreeNode* connect(TreeNode* root) {
 		//non-cursive
 		if (!root || !root->left)return root;
-		Node* cur = root;
-		Node* next = root;
+		TreeNode* cur = root;
+		TreeNode* next = root;
 		while (cur)
 		{
 			next = cur->left;

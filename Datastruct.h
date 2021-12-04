@@ -20,15 +20,15 @@
 #include<stdlib.h>
 
 #pragma once
-struct TreeNode {
-	int val;
-	TreeNode* left;
-	TreeNode* right;
-	TreeNode() : val(0), left(nullptr), right(nullptr) {}
-	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
-
-};
+//struct TreeNode {
+//	int val;
+//	TreeNode* left;
+//	TreeNode* right;
+//	TreeNode() : val(0), left(nullptr), right(nullptr) {}
+//	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+//	TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+//
+//};
 struct ListNode {
 	int val;
 	ListNode* next;
@@ -54,17 +54,17 @@ struct ListNode {
 //		neighbors = _neighbors;
 //	}
 //};
-class Node {
+class TreeNode {
 public:
 	int val;
-	Node* left;
-	Node* right;
-	Node* next;
+	TreeNode* left;
+	TreeNode* right;
+	TreeNode* next;
 
-	Node() : val(0), left(NULL), right(NULL), next(NULL) {}
+	TreeNode() : val(0), left(NULL), right(NULL), next(NULL) {}
 
-	Node(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
+	TreeNode(int _val) : val(_val), left(NULL), right(NULL), next(NULL) {}
 
-	Node(int _val, Node* _left, Node* _right, Node* _next)
+	TreeNode(int _val, TreeNode* _left, TreeNode* _right, TreeNode* _next)
 		: val(_val), left(_left), right(_right), next(_next) {}
 };
