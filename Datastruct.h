@@ -18,6 +18,7 @@
 #include <sstream> 
 #include <algorithm>
 #include<stdlib.h>
+#include <functional>
 
 #pragma once
 struct TreeNode {
