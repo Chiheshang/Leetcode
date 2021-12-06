@@ -28,6 +28,6 @@ public:
 	}
 };
 int main() {
-	vector<int > a = { 2, -3, -1, 5, -4 };
-	Solution().largestSumAfterKNegations(a, 2);
+	vector<int > a = { 3,-1,0,2 };
+	Solution().largestSumAfterKNegations(a, 3);
 }
