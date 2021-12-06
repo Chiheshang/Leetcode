@@ -14,7 +14,7 @@ public:
 			}
 		}
 		k = k % 2;
-		if (k || !nums[0]) {
+		if (k && nums[0]) {
 			for (int i = 0; i < nums.size(); i++) {
 				if (nums[i] > 0) {
 					nums[i] *= -1;
