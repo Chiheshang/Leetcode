@@ -6,26 +6,49 @@
 #include<stack>
 // @lc code=start
 class MyQueue {
-    stack<int> m_stack;
+    stack<int> m_stack1;
+    stack<int> m_stack2;
+    stack<int> temp;
 public:
     MyQueue() {
-
+        
     }
     
     void push(int x) {
-
+        m_stack1.push(x);
     }
     
     int pop() {
-
+        while (!m_stack1.empty())
+        {
+            m_stack2.push(m_stack1.top());
+            m_stack1.pop();
+        }
+        int ans=m_stack2.top();
+        m_stack2.pop();
+        while (!m_stack2.empty())
+        {
+            m_stack1.push(m_stack2.top());
+            m_stack2.pop();
+        }
+        return ans;
     }
     
     int peek() {
-
+        temp=m_stack1;
+        while (!m_stack1.empty())
+        {
+            m_stack2.push(m_stack1.top());
+            m_stack1.pop();
+        }
+        int ans=m_stack2.top();
+        m_stack2=m_stack1;
+        m_stack1=temp;
+        return ans;
     }
     
     bool empty() {
-
+        return m_stack1.empty();
     }
 };
 
