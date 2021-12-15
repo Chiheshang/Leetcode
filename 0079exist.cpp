@@ -2,19 +2,22 @@
 using namespace std;
 class Solution {
 public:
-	bool exist(vector<vector<char>>& board, string word) {
+	bool exist(vector<vector<char>> board, string word) {
 		for (int i = 0; i < board.size(); i++) {
 			for (int j = 0; j < board[0].size(); j++) {
-				if (hasnext(board, i, j, word)) {
+				vector<vector<char>> b = board;
+				if (hasnext(b, i, j, word)) {
 					return true;
 				}
 			}
 		}
 		return false;
 	}
-	bool hasnext(vector<vector<char>> board, int i, int j, string word) {
+	bool hasnext(vector<vector<char>>& board, int i, int j, string word) {
 		if (i < 0 || i >= board.size() || j < 0 || j >= board[0].size())return false;
-		if (board[i][j] != word[0])return false;
+		if (board[i][j] != word[0]) {
+			return false;
+		}
 		else {
 			board[i][j] = -1;
 		}
@@ -26,3 +29,7 @@ public:
 			hasnext(board, i, j - 1, word) || hasnext(board, i, j + 1, word);
 	}
 };
+//int main() {
+//	vector<vector<char>> a = { {'A','B','C','E'},{'S','F','E','S'},{'A','D','E','E'} };
+//	Solution().exist(a, "ABCESEEEFS");
+//}
