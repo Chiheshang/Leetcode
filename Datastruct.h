@@ -20,7 +20,9 @@
 #include<stdlib.h>
 #include <functional>
 #include <utility>
-
+#include <sys/timeb.h>
+#include <ctime>
+#include <iomanip>
 #pragma once
 struct TreeNode {
 	int val;
@@ -39,6 +41,27 @@ struct ListNode {
 	ListNode(int x, ListNode* next) : val(x), next(next) {}
 
 };
+long long getCurrentTimeMillis()
+{
+    using namespace std;
+
+    timeb now;
+    ftime(&now);
+    std::stringstream milliStream;
+    // 由于毫秒数不一定是三位数，故设置宽度为3，前面补0
+    milliStream << setw(3) << setfill('0') << right << now.millitm;
+
+    stringstream secStream;
+    secStream << now.time;
+    string timeStr(secStream.str());
+    timeStr.append(milliStream.str());
+
+    long long timeLong;
+    stringstream transStream(timeStr);
+    transStream >> timeLong;
+
+    return timeLong;
+}
 //class Node {
 //public:
 //	int val;
