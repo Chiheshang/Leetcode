@@ -10,15 +10,20 @@ class Solution
 public:
     int longestPalindrome(string s)
     {
-        vector<int> letter(26,0);
+        map<char,int>letter;
         for(char cur:s){
+            cout<<cur-'A'<<endl;
             letter[cur-'A']++;
         }
         int res=0;
         bool tag=false;
-        for(auto x:letter){
-            if(x%2==1)tag
+        for(auto cur:letter){
+            int x=cur.second;
+            if(x%2==1)tag=true;
+            res+=x/2*2;
         }
+        if(tag) res++;
+        return res;
     }
 };
 // @lc code=end
