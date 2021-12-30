@@ -18,6 +18,7 @@ public:
 
     int get(int key)
     {
+        return index[key][0];
     }
 
     void put(int key, int value)
@@ -28,7 +29,17 @@ public:
         }
         else
         {
-            int temp=index[index.begin()->first]
+            int temp=index.begin()->first;
+            int max=index[index.begin()->first][1];
+            for(auto itor:index){
+                if(itor.second[1]>max){
+                    max=itor.second[1];
+                    temp=itor.first;
+                }
+                itor.second[1]++;
+            }
+            index.erase(index.find(temp));
+            index[key]={value,1};
         }
     }
 };
