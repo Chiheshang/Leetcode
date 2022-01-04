@@ -5,11 +5,17 @@
  */
 
 // @lc code=start
-class Solution {
+class Solution
+{
 public:
-    bool repeatedSubstringPattern(string s) {
-        
+    bool repeatedSubstringPattern(string s)
+    {
+        string temp = s + s;
+        temp = temp.substr(1, temp.size() - 2);
+        if (temp.find(s) != string::npos)
+            return true;
+        else
+            return false;
     }
 };
 // @lc code=end
-
