@@ -16,26 +16,40 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    vector<int> inorderTraversal(TreeNode* root) {
+    vector<int> inorderTraversal(TreeNode *root)
+    {
         vector<int> ans;
-        if(root==nullptr)return ans;
-        stack<TreeNode*> stack;
+        if (root == nullptr)
+            return ans;
+        stack<TreeNode *> stack;
+        stack.push(root);
         while (root->left)
         {
-            stack.push_back(root);
-            root=root->left;
+            root = root->left;
+            stack.push(root);
         }
+        cout << stack.size() << endl;
         while (!stack.empty())
         {
-            auto& temp=stack.top();
+            auto temp = stack.top();
             stack.pop();
-            
+            if (temp == nullptr)
+                continue;
+            ans.push_back(temp->val);
+            temp = temp->right;
+            if (temp == nullptr)
+                continue;
+            stack.push(temp);
+            while (temp->left)
+            {
+                temp = temp->left;
+                stack.push(temp);
+            }
         }
-        
         return ans;
     }
 };
 // @lc code=end
-
