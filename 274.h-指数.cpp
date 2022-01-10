@@ -10,25 +10,18 @@
 class Solution
 {
 public:
-    int hIndex(vector<int> &citations)
+    int hIndex(vector<int> &c)
     {
-        sort(citations.begin(), citations.end());
-        int left = 0, right = citations.size();
-        while (left < right)
+        int l = 0, r = c.size() - 1, avg;
+        sort(begin(c), end(c));
+        while (l <= r)
         {
-            int mid = (left + right) / 2;
-            if (citations[mid] >= mid && citations[mid - 1] < mid)
-                return mid;
-            else if (citations[mid] > mid)
-            {
-                left = mid + 1;
-            }
+            if (c[avg = (r + l) / 2] < c.size() - avg)
+                l = avg + 1;
             else
-            {
-                right = mid;
-            }
+                r = avg - 1;
         }
-        return 0;
+        return c.size() - l;
     }
 };
 // @lc code=end
