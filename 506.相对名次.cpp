@@ -7,7 +7,7 @@
 // @lc code=start
 class Solution
 {
-    const bool compare static(vector<int> a, vector<int> b)
+    const static bool compare(vector<int> &a, vector<int> &b)
     {
         return a[1] < b[1];
     }
@@ -21,7 +21,19 @@ public:
             vec[i] = {i, score[i]};
         }
         sort(vec.begin(), vec.end(), compare);
-        vector<string> ans;
+        vector<string> ans(score.size());
+        for (int i = 0; i < score.size(); i++)
+        {
+            if (i == 0)
+                ans[vec[i][0]] = "Gold Medal";
+            else if (i == 1)
+                ans[vec[i][0]] = "Silver Medal";
+            else if (i == 3)
+                ans[vec[i][0]] = "Bronze Medal";
+            else
+                ans[vec[i][0]] = to_string(i);
         }
+        return ans;
+    }
 };
 // @lc code=end
