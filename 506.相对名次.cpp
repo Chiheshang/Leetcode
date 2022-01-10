@@ -9,7 +9,7 @@ class Solution
 {
     const static bool compare(vector<int> &a, vector<int> &b)
     {
-        return a[1] < b[1];
+        return a[1] > b[1];
     }
 
 public:
@@ -28,10 +28,10 @@ public:
                 ans[vec[i][0]] = "Gold Medal";
             else if (i == 1)
                 ans[vec[i][0]] = "Silver Medal";
-            else if (i == 3)
+            else if (i == 2)
                 ans[vec[i][0]] = "Bronze Medal";
             else
-                ans[vec[i][0]] = to_string(i);
+                ans[vec[i][0]] = to_string(i+1);
         }
         return ans;
     }
