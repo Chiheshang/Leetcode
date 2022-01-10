@@ -5,8 +5,8 @@
  */
 
 // @lc code=start
-// #include "Datastruct.h"
-// using namespace std;
+#include "Datastruct.h"
+using namespace std;
 class Solution
 {
 public:
