@@ -85,5 +85,6 @@
         "thread": "cpp",
         "typeindex": "cpp"
     },
-    "commentTranslate.source": "Google"
+    "commentTranslate.source": "Google",
+    "commentTranslate.hover.enabled": true
 }
