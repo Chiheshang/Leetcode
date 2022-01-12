@@ -5,11 +5,20 @@
  */
 
 // @lc code=start
-class Solution {
+class Solution
+{
 public:
-    int arrayPairSum(vector<int>& nums) {
-
+    int arrayPairSum(vector<int> &nums)
+    {
+        sort(nums.begin(), nums.end());
+        int ans = 0;
+        for (int i = 0; i < nums.size(); i++)
+        {
+            if ((i & 1) == 0)
+                ans += nums[i];
+        }
+        // cout << (3 & 1) << endl;
+        return ans;
     }
 };
 // @lc code=end
-
